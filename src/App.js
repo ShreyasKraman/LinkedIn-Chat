@@ -1,5 +1,4 @@
- import React, { Component } from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
 import { Sidebar } from "./containers/Sidebar"
 import { MessageList } from "./containers/MessageList"
