@@ -15,6 +15,12 @@ class App extends Component {
         </section>
       </div>
     );
+    // const authurl = "https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=78gwuqg37yeke1&redirect_uri=http%3A%2F%2Flocalhost%3A3001%2Fchat%2Fauth&state=2522abcde12345&scope=r_basicprofile";
+    //     return (
+    //         <div className="App">
+    //             <a href={authurl}><img src="signin.png" alt="Sign in with Linkedin"/></a>
+    //         </div>
+    //     );
   }
 }
 

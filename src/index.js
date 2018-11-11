@@ -28,6 +28,11 @@ ReactDOM.render(
 	<Provider store={store}>
 		<App />
 	</Provider>, 
+	// <Router history={browserHistory}>
+    //     <Route path="/" component={App}/>
+    //     <Route path="/chat/auth" component={Dashboard}/>
+	// </Router>,
+
 	document.getElementById('root')
 );
 
