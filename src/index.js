@@ -8,28 +8,27 @@ import './index.css';
 import App  from './App';
 import * as serviceWorker from './serviceWorker';
 import setupSocket from './sockets'
+import reducers from './reducers'
 import handleNewMessage from './sagas'
 import username from './utils/name'
 
-import reducers from './reducers'
 
 const sagaMiddleware = createSagaMiddleware()
 
 const store = createStore(
-    reducers,
-    applyMiddleware(sagaMiddleware)
+	reducers,
+	applyMiddleware(sagaMiddleware)
 )
-
 
 const socket = setupSocket(store.dispatch, username)
 
-sagaMiddleware.run(handleNewMessage, {socket,username})
+sagaMiddleware.run(handleNewMessage, {socket, username})
 
 ReactDOM.render(
-    <Provider store={store}>
-        <App /> 
-    </Provider>,
-    document.getElementById('root')
+	<Provider store={store}>
+		<App />
+	</Provider>, 
+	document.getElementById('root')
 );
 
 // If you want your app to work offline and load faster, you can change
